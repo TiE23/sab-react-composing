@@ -1,0 +1,108 @@
+/* Border-box is just way more intuitive a way to size things */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove margins: to conform to first principle where elements do not set
+their position, size, or margin. */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Common behavior of designers to just erase all default styling.
+But! the [class] tag means that this only applies to these elements that have
+custom classes defined. So, pure ul/ol elements are not affected. */
+ul[class],
+ol[class] {
+  padding: 0;
+  list-style: none;
+}
+
+/* Not in tutorial */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* This causes the entire body to take up the entire view port, even if the
+content does not. */
+body {
+  min-block-size: 100vh;
+  text-rendering: optimizeSpeed;  /* Not in tutorial */
+  line-height: 1.5;               /* Not in tutorial */
+  font-size: 100%;                /* Not in tutorial */
+}
+
+/* Not in tutorial */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* max-inline-size makes images responsive by default (they stretch to fill)
+and display: block makes images behave the way most people expect. Inline is
+reserved for like... emoticons (not emoji, emoticons). */
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+/* This makes for a good default cap for the inline-size of text. Research says
+that 60 characters is good for readability. I think this is a pretty great thing
+to do to save your from hideously wide text elements when you're first starting
+out that you can then adjust as you want later.
+60ch width means the width of 60 "0" characters. */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+figcaption {
+  max-inline-size: 60ch;
+}
+
+/* Not in tutorial */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  max-inline-size: 100%;
+}
+
+/* Not in tutorial */
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+/* Not in tutorial */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
