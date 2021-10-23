@@ -12,8 +12,8 @@ type SplitProps = {
 
 const Split = styled.div<SplitProps>`
   display: grid;
-  gap: ${({ gutter }) => SPACING_MAP[gutter ?? "lg"]};
-  grid-template-columns: ${({ fraction }) => FRACTIONS[fraction ?? "1/2"]};
+  gap: ${({ gutter = "lg" }) => SPACING_MAP[gutter]};
+  grid-template-columns: ${({ fraction = "1/2" }) => FRACTIONS[fraction]};
 `;
 // The fr unit -> https://css-tricks.com/introduction-fr-css-unit/
 

@@ -9,11 +9,13 @@ type StackProps = {
 
 export const Stack = styled.div<StackProps>`
   display: grid;
-  gap: ${(props) => SPACING_MAP[props?.gutter ?? "lg"]};
+  gap: ${({ gutter = "lg" }) => SPACING_MAP[gutter]};
 `;
 // Alternative definitions of gap I tried:
+//  gap: ${(props) => SPACING_MAP[props?.gutter ?? "lg"] };
 //  gap: ${(props) => props?.gutter ? SPACING_MAP[props.gutter] : SPACING_MAP.lg };
 //  gap: ${(props) => (props.gutter && SPACING_MAP[props.gutter]) ?? SPACING_MAP.lg };
+//
 // Without typescript the author just used:
 //  gap: ${(props) => SPACING_MAP[props.gutter] ?? SPACING_MAP.lg};
 
