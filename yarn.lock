@@ -1254,19 +1254,26 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@bedrock-layout/center@1.4.3":
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/@bedrock-layout/center/-/center-1.4.3.tgz#2e2a78363e851a4bf5829dbbefd16995162f6e67"
-  integrity sha512-Yh41h9uS97QLp8EPfI3t5KTE3FaWZAijCG7vxuG6srNx26zti6F6KFOGtQg+DGN/9P/O2YVP9XRGNmVKxU1xUA==
+"@bedrock-layout/center@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@bedrock-layout/center/-/center-2.0.0.tgz#4ad58b2886a567e631cf96e029af5b17e131a43e"
+  integrity sha512-hIRBL8BTiyEpzk4eoFRVfYmLo3J+HKbZfd/T7HEDFM+XYg2ToxVnmWk8tFAWj52I+t0D/qLpdBz9xN+ARKw6kA==
   dependencies:
-    "@bedrock-layout/spacing-constants" "^2.0.0"
+    "@bedrock-layout/spacing-constants" "^2.1.0"
 
 "@bedrock-layout/css-reset@1.0.8":
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/@bedrock-layout/css-reset/-/css-reset-1.0.8.tgz#3390a47e30b0a98b42fbafc69f5efec214957dae"
   integrity sha512-RjuM6qd75K0UD99xW0fhhBoG8cWJdinCzwGUzS5I/F+/AnkduFndM6Fyv5gwyDPw2hFVmEsgpUBrCu0LeDT9ww==
 
-"@bedrock-layout/spacing-constants@^2.0.0":
+"@bedrock-layout/padbox@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@bedrock-layout/padbox/-/padbox-2.0.1.tgz#dc65fa40f646d0f0bd948e6c6e23d687672830d8"
+  integrity sha512-9YoAvxhl+qIxrf7rEZXdNUmAMRWZK6uPYXFwl82pILJB4ydnp3+SRcQEmr6kNq9Hhjoo6hLj8UiUeNhdR7r0lw==
+  dependencies:
+    "@bedrock-layout/spacing-constants" "^2.1.0"
+
+"@bedrock-layout/spacing-constants@^2.1.0":
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/@bedrock-layout/spacing-constants/-/spacing-constants-2.4.2.tgz#60c6954298932bcb29f2b58e94f89fb98a3e484e"
   integrity sha512-Wj9eI10uMJr1GA0rJjI/c3fPgYO7t+IelNo5fP6kCN2+WAoDkZGQdQGYzfDUMsNaXT/WYr0nP82+Of8MoG3cLQ==

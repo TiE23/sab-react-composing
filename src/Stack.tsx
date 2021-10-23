@@ -1,24 +1,24 @@
 import styled from "styled-components";
 
 import { ShirtSizes } from "./types";
-import { GUTTER_SIZES } from "./consts";
+import { SPACING_MAP } from "./consts";
 
 type StackProps = {
   gutter?: ShirtSizes,
 };
 
-const Stack = styled.div<StackProps>`
+export const Stack = styled.div<StackProps>`
   display: grid;
-  gap: ${(props) => GUTTER_SIZES[props?.gutter ?? "lg"]};
+  gap: ${(props) => SPACING_MAP[props?.gutter ?? "lg"]};
 `;
-
 // Alternative definitions of gap I tried:
-//  gap: ${(props) => props?.gutter ? GUTTER_SIZES[props.gutter] : GUTTER_SIZES.lg };
-//  gap: ${(props) => (props.gutter && GUTTER_SIZES[props.gutter]) ?? GUTTER_SIZES.lg };
+//  gap: ${(props) => props?.gutter ? SPACING_MAP[props.gutter] : SPACING_MAP.lg };
+//  gap: ${(props) => (props.gutter && SPACING_MAP[props.gutter]) ?? SPACING_MAP.lg };
 // Without typescript the author just used:
-//  gap: ${(props) => GUTTER_SIZES[props.gutter] ?? GUTTER_SIZES.lg};
+//  gap: ${(props) => SPACING_MAP[props.gutter] ?? SPACING_MAP.lg};
 
-export default function Subscribe() {
+
+export function Subscribe() {
   return (
     <Stack gutter="xl">
       <Stack gutter="md">
