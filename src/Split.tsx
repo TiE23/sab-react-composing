@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { Form } from "./Form";
+import { Form } from "./Columns";
 
 import { Fractions, ShirtSizes } from "./types";
 import { SPACING_MAP, FRACTIONS } from "./consts";

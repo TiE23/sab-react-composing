@@ -1266,6 +1266,20 @@
   resolved "https://registry.yarnpkg.com/@bedrock-layout/css-reset/-/css-reset-1.0.8.tgz#3390a47e30b0a98b42fbafc69f5efec214957dae"
   integrity sha512-RjuM6qd75K0UD99xW0fhhBoG8cWJdinCzwGUzS5I/F+/AnkduFndM6Fyv5gwyDPw2hFVmEsgpUBrCu0LeDT9ww==
 
+"@bedrock-layout/frame@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@bedrock-layout/frame/-/frame-2.0.0.tgz#7935d9e092401b77f0208e20099d574bc0e9df09"
+  integrity sha512-bi387wKlsJjQ7TipsBEqq5S6fdxyrixCpIj4EONf0HnV1SB2tEAXJacuN1qqPmREVsa69M0+CSj94qNnudsC9A==
+  dependencies:
+    "@bedrock-layout/spacing-constants" "^2.1.0"
+
+"@bedrock-layout/inline-cluster@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@bedrock-layout/inline-cluster/-/inline-cluster-2.0.2.tgz#469625ec3a4e01b067da07a4f88bec1b8cbc5279"
+  integrity sha512-h3TPBiMFYoCfuNtJiJyO9aVXTKs8rMXCJA4TuAWUS/geBSdge9GMxnpTqqWI8FDZL9blcZb5sZwG5Zelllz/5A==
+  dependencies:
+    "@bedrock-layout/spacing-constants" "^2.1.0"
+
 "@bedrock-layout/padbox@2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@bedrock-layout/padbox/-/padbox-2.0.1.tgz#dc65fa40f646d0f0bd948e6c6e23d687672830d8"
@@ -1277,6 +1291,20 @@
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/@bedrock-layout/spacing-constants/-/spacing-constants-2.4.2.tgz#60c6954298932bcb29f2b58e94f89fb98a3e484e"
   integrity sha512-Wj9eI10uMJr1GA0rJjI/c3fPgYO7t+IelNo5fP6kCN2+WAoDkZGQdQGYzfDUMsNaXT/WYr0nP82+Of8MoG3cLQ==
+
+"@bedrock-layout/split@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@bedrock-layout/split/-/split-2.0.2.tgz#9452da484209ac5205912af4ec7e0c1a9c81e734"
+  integrity sha512-xcOuLsFg1ZekdegeLJ7qHrEhATdjyTuOQk6tNTjaTX2JSILJ4bMjXFKCxjE6QyNgVVuBmpwxQGf2yevCEK4NUQ==
+  dependencies:
+    "@bedrock-layout/spacing-constants" "^2.1.0"
+
+"@bedrock-layout/stack@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@bedrock-layout/stack/-/stack-2.0.1.tgz#503dbfa875728bd7a495d9a9c0e19816956943f6"
+  integrity sha512-g9+Op9VFG4DB2Z0WRVGvxDM/txXyDl3lmi3eIUtyfqlz+S8aBtzyoFn7+S3Np91oPoaHVF1+16n6KGdZM92aRA==
+  dependencies:
+    "@bedrock-layout/spacing-constants" "^2.1.0"
 
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
