@@ -1,3 +1,5 @@
+import { type } from "os";
+
 export type ShirtSizes =
   | "xs"
   | "sm"
@@ -25,3 +27,10 @@ export type JustifyAlignProps =
   | "center";
 
 export type JustifyAlignMap = {[key in JustifyAlignProps]: string};
+
+export type StretchProps =
+  | "all"
+  | "start"
+  | "end";
+
+export type StretchMap = {[key in StretchProps]: string};

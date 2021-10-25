@@ -1,4 +1,4 @@
-import { ShirtSizesMap, FractionsMap, JustifyAlignMap } from "./types";
+import { ShirtSizesMap, FractionsMap, JustifyAlignMap, StretchMap } from "./types";
 
 export const SPACING_MAP: ShirtSizesMap = {
   xs: "0.125rem",
@@ -23,4 +23,10 @@ export const JUSTIFY_ALIGN_MAP: JustifyAlignMap = {
   start: "flex-start",
   end: "flex-end",
   center: "center",
+};
+
+export const STRETCH_MAP: StretchMap = {
+  all: "> * { flex: 1 }",
+  start: "> :first-child { flex: 1 }",
+  end: "> :last-child { flex: 1 }",
 };
