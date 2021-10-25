@@ -3,18 +3,18 @@ import ReactDOM from "react-dom";
 import { Center } from "@bedrock-layout/center";
 import { PadBox } from "@bedrock-layout/padbox";
 import "@bedrock-layout/css-reset/lib/reset.css";
-import ContactList from "./Grid";
+import MenuBar from "./MenuBar";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <React.StrictMode>
     <PadBox
       as={Center}
-      padding="lg"
+      padding="md"
       maxWidth="85rem"
       style={{ fontFamily: "sans-serif" }}
     >
-      <ContactList />
+      <MenuBar />
     </PadBox>
   </React.StrictMode>,
   rootElement

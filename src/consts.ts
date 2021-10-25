@@ -1,4 +1,4 @@
-import { ShirtSizesMap, FractionsMap } from "./types";
+import { ShirtSizesMap, FractionsMap, JustifyAlignMap } from "./types";
 
 export const SPACING_MAP: ShirtSizesMap = {
   xs: "0.125rem",
@@ -17,4 +17,10 @@ export const FRACTIONS: FractionsMap = {
   "3/4": "3efr 1fr",
   "auto-start": "auto 1fr",
   "auto-end": "1fr auto",
+};
+
+export const JUSTIFY_ALIGN_MAP: JustifyAlignMap = {
+  start: "flex-start",
+  end: "flex-end",
+  center: "center",
 };

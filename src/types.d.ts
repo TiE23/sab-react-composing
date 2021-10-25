@@ -18,3 +18,10 @@ export type Fractions =
   | "auto-end";
 
 export type FractionsMap = {[key in Fractions]: string};
+
+export type JustifyAlignProps =
+  | "start"
+  | "end"
+  | "center";
+
+export type JustifyAlignMap = {[key in JustifyAlignProps]: string};
