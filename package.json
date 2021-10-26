@@ -6,6 +6,7 @@
     "@bedrock-layout/center": "2.0.0",
     "@bedrock-layout/css-reset": "1.0.8",
     "@bedrock-layout/frame": "2.0.0",
+    "@bedrock-layout/grid": "^2.1.6",
     "@bedrock-layout/inline-cluster": "2.0.2",
     "@bedrock-layout/padbox": "2.0.1",
     "@bedrock-layout/split": "2.0.2",
