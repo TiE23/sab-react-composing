@@ -1,4 +1,5 @@
 import { Attribution } from "./testimonial-parts";
+import { Stack } from "@bedrock-layout/stack";
 
 import styled from "styled-components";
 
@@ -52,7 +53,7 @@ const Center = styled.div<CenterProps>`
 
 export default function Testimonial() {
   return (
-    <Center maxWidth="60ch">
+    <Center as={Stack} gutter="xl" maxWidth="60ch" centerChildren centerText>
       <h2>Home4Hire</h2>
       <p>
         "Lorem ipsum dolor sit amet, nibh lorem convenire quo et. Usu ea libris
