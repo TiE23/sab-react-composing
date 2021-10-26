@@ -21,7 +21,7 @@ type ResponsiveProps = {
 const responsive = css<ResponsiveProps>`
   --switchAt: ${({ switchAt }) => {
     // Pay close attention to missing end ; by looking at CSS rules in browser!
-    if (typeof switchAt === "string") return `${switchAt}`;  // <-- Here!
+    if (typeof switchAt === "string") return `${switchAt};`;  // <-- Here!
     if (typeof switchAt === "number") return `${switchAt}px}`;// Not required?
     return switchAt; // Undefined is OK.
   }}
