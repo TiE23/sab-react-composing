@@ -13,7 +13,6 @@
     "@bedrock-layout/padbox": "^2.0.19",
     "@bedrock-layout/split": "^2.1.24",
     "@bedrock-layout/stack": "^2.2.4",
-    "@bedrock-layout/switcher": "^2.1.0",
     "@bedrock-layout/use-media-query": "^1.1.6",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -26,6 +25,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "react-use": "^17.3.1",
     "styled-components": "^5.3.3",
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
