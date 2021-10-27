@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { useMedia } from "react-use";
 import { Cover } from "@bedrock-layout/cover";
 import { Frame } from "@bedrock-layout/frame";
 import { Stack } from "@bedrock-layout/stack";
@@ -8,9 +9,13 @@ import { InlineCluster } from "@bedrock-layout/inline-cluster";
 
 import dataImage from "./images/data.jpg";
 
+const NARROW_SPLIT_SIZE = "60rem";
+const NARROW_NAV_SIZE = "40rem";
+
 export default function Hero() {
   const menuRef = useRef<HTMLDivElement>(null);
   const menuHeight = menuRef.current?.getBoundingClientRect().height ?? 48;
+  const isCoverNarrow = useMedia(`(max-width:${NARROW_SPLIT_SIZE})`);
 
   return (
     <Stack as="header" gutter="sm">
@@ -19,7 +24,7 @@ export default function Hero() {
         align="center"
         stretch={1}
         ref={menuRef}
-        switchAt="40rem"
+        switchAt={NARROW_NAV_SIZE}
       >
         <h1>Arrow Data</h1>
 
@@ -40,10 +45,15 @@ export default function Hero() {
         </InlineCluster>
       </Inline>
 
-      <Split gutter="sm" switchAt="60rem">
+      <Split gutter="sm" switchAt={NARROW_SPLIT_SIZE}>
         {/* 0.25rem is the navbar's gutter */}
         <Cover gutter="none" minHeight={`calc(100vh - ${menuHeight}px - 0.25rem)`}>
           <Stack as="section" gutter="xl">
+            {isCoverNarrow && (
+              <Frame position="70% 50%" ratio={[3, 1]}>
+                <img src={dataImage} alt="computer with graphs" />
+              </Frame>
+            )}
             <h2>Data Solutions</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -57,10 +67,11 @@ export default function Hero() {
             </InlineCluster>
           </Stack>
         </Cover>
-
-        <Frame position="70% 50%">
-          <img src={dataImage} alt="computer with graphs" />
-        </Frame>
+        {!isCoverNarrow && (
+          <Frame position="70% 50%">
+            <img src={dataImage} alt="computer with graphs" />
+          </Frame>
+        )}
       </Split>
     </Stack>
   );
