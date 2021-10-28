@@ -22,49 +22,57 @@ export default function App() {
           <SettingsPane as="main">
             <SidePanel />
             <FormPanel>
-              <section>
-                <header>
-                  <h2>Profile</h2>
-                  <span>
-                    This information will be displayed publicly so be careful what yuo choose.
-                  </span>
-                </header>
-                <div>
-                  <label>
-                    User Name
-                    <input />
-                  </label>
-                  <label>
-                    About
-                    <textarea />
+              <PadBox as="section" padding="lg">
+                <Stack gutter="lg">
+                  <Stack as="header" gutter="md">
+                    <h2>Profile</h2>
                     <span>
-                      Brief description for your profile. URLs are hyperlinked.
+                      This information will be displayed publicly so be careful what yuo choose.
                     </span>
-                  </label>
-                  <label>
-                    Photo
-                    <Logo inverse size="10rem" />
-                  </label>
-                </div>
-                <div>
-                  <label>
-                    First Name
-                    <input />
-                  </label>
-                  <label>
-                    Last Name
-                    <input />
-                  </label>
-                  <label>
-                    URL
-                    <input />
-                  </label>
-                  <label>
-                    Company
-                    <input />
-                  </label>
-                </div>
-              </section>
+                  </Stack>
+
+                  <div>
+                    <Split gutter="lg" fraction="auto-end">
+                      <Stack gutter="lg">
+                        <Stack as="label" gutter="sm">
+                          User Name
+                          <input />
+                        </Stack>
+                        <Stack as="label" gutter="sm">
+                          About
+                          <textarea />
+                          <span>
+                            Brief description for your profile. URLs are hyperlinked.
+                          </span>
+                        </Stack>
+                      </Stack>
+                      <label>
+                        Photo
+                        <Logo inverse size="10rem" />
+                      </label>
+                    </Split>
+                  </div>
+
+                  <div>
+                    <label>
+                      First Name
+                      <input />
+                    </label>
+                    <label>
+                      Last Name
+                      <input />
+                    </label>
+                    <label>
+                      URL
+                      <input />
+                    </label>
+                    <label>
+                      Company
+                      <input />
+                    </label>
+                  </div>
+                </Stack>
+              </PadBox>
 
               <section>
                 <h2>Privacy</h2>
