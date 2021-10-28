@@ -1,8 +1,11 @@
+import { PropsWithChildren } from "react";
+
 import styled from "styled-components";
 import { PadBox } from "@bedrock-layout/padbox";
 import { Center } from "@bedrock-layout/center";
 import { Stack } from "@bedrock-layout/stack";
 import { Split } from "@bedrock-layout/split";
+import { Columns, Column } from "@bedrock-layout/columns";
 
 import { Menu } from "./Menu";
 import { SidePanel } from "./SidePanel";
@@ -24,53 +27,49 @@ export default function App() {
             <FormPanel>
               <PadBox as="section" padding="lg">
                 <Stack gutter="lg">
+
                   <Stack as="header" gutter="md">
                     <h2>Profile</h2>
-                    <span>
+                    <SubLabel>
                       This information will be displayed publicly so be careful what yuo choose.
-                    </span>
+                    </SubLabel>
                   </Stack>
 
-                  <div>
-                    <Split gutter="lg" fraction="auto-end">
-                      <Stack gutter="lg">
-                        <Stack as="label" gutter="sm">
-                          User Name
-                          <input />
-                        </Stack>
-                        <Stack as="label" gutter="sm">
-                          About
-                          <textarea />
-                          <span>
-                            Brief description for your profile. URLs are hyperlinked.
-                          </span>
-                        </Stack>
-                      </Stack>
-                      <label>
-                        Photo
-                        <Logo inverse size="10rem" />
-                      </label>
-                    </Split>
-                  </div>
+                  <Split gutter="lg" fraction="auto-end">
+                    <Stack gutter="lg">
+                      <InputGroup label="User Name">
+                        <Input />
+                      </InputGroup>
+                      <InputGroup label="About">
+                        <Input as="textarea" />
+                        <SubLabel>
+                          Brief description for your profile. URLs are hyperlinked.
+                        </SubLabel>
+                      </InputGroup>
+                    </Stack>
+                    <label>
+                      Photo
+                      <Logo inverse size="10rem" />
+                    </label>
+                  </Split>
 
-                  <div>
-                    <label>
-                      First Name
-                      <input />
-                    </label>
-                    <label>
-                      Last Name
-                      <input />
-                    </label>
-                    <label>
-                      URL
-                      <input />
-                    </label>
-                    <label>
-                      Company
-                      <input />
-                    </label>
-                  </div>
+                  <Columns gutter="lg" columns={2}>
+                    <InputGroup label="First Name">
+                      <Input />
+                    </InputGroup>
+                    <InputGroup label="Last Name">
+                      <Input />
+                    </InputGroup>
+                    <Column span={2}>
+                      <InputGroup label="URL">
+                        <Input />
+                      </InputGroup>
+                    </Column>
+                    <InputGroup label="Company">
+                      <Input />
+                    </InputGroup>
+                  </Columns>
+
                 </Stack>
               </PadBox>
 
@@ -89,6 +88,33 @@ export default function App() {
     </div>
   );
 }
+
+const SubLabel = styled.span`
+  color: grey;
+`;
+
+/**
+ * Pretty cool that we can also apply this to textarea as well just by using
+ * as="textarea".
+ */
+const Input = styled.input`
+  border-radius: 0.25rem;
+  border: 1px solid lightgrey;
+  color: #303030;
+`;
+
+type InputGroupProps = {
+  label: string,
+};
+const InputGroup = ({ label, children }: PropsWithChildren<InputGroupProps>) => {
+  return (
+    <Stack as="label" gutter="sm">
+      {label}
+      {children}
+    </Stack>
+  )
+};
+
 
 const FormPanel = styled.div`
   border-inline-start: 1px solid lightgrey;
