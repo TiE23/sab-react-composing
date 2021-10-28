@@ -3,6 +3,7 @@ import { PadBox } from "@bedrock-layout/padbox";
 import { Center } from "@bedrock-layout/center";
 import { Stack } from "@bedrock-layout/stack";
 import { Split } from "@bedrock-layout/split";
+import { Inline } from "@bedrock-layout/inline";
 
 import { Menu } from "./Menu";
 import { SidePanel } from "./SidePanel";
@@ -34,7 +35,7 @@ export default function App() {
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     </SubLabel>
                   </Stack>
-                  <TogglePane>
+                  <TogglePanel>
                     <ToggleGroup
                       id="available"
                       label="Available for hire"
@@ -58,14 +59,14 @@ export default function App() {
                       subLabel="Sit amet consectetur lorem ipsum dolor."
                       checked
                     />
-                  </TogglePane>
+                  </TogglePanel>
                 </Stack>
               </PadBox>
 
-              <div>
-                <button>Cancel</button>
-                <button>Save</button>
-              </div>
+              <Inline as={PadBox} padding="lg" gutter="lg" justify="end">
+                <Button>Cancel</Button>
+                <Button primary>Save</Button>
+              </Inline>
             </FormPanel>
           </SettingsPane>
         </Center>
@@ -73,6 +74,20 @@ export default function App() {
     </div>
   );
 }
+
+type ButtonProps = {
+  primary?: boolean,
+};
+
+const Button = styled(PadBox).attrs(() => ({
+  as: "button",
+  padding: ["md", "lg"],
+}))<ButtonProps>`
+  border-radius: 0.25rem;
+  border: ${({ primary = false }) => primary ? "none" : "1px solid black"};
+  background: ${({ primary = false }) => primary ? "black" : "white"};
+  color: ${({ primary = false }) => primary ? "white" : "black"};
+`;
 
 
 const FormPanel = styled.div`
@@ -84,7 +99,7 @@ const FormPanel = styled.div`
   }
 `;
 
-const TogglePane = styled.div`
+const TogglePanel = styled.div`
   > * + * {
     border-block-start: 1px solid lightgrey;
   }
