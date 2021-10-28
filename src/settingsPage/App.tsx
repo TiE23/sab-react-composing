@@ -8,6 +8,7 @@ import { Menu } from "./Menu";
 import { SidePanel } from "./SidePanel";
 import { ProfileSection } from "./ProfileSection";
 import { SubLabel } from "./styles";
+import { ToggleGroup } from "./ToggleGroup";
 
 export default function App() {
   return (
@@ -33,7 +34,31 @@ export default function App() {
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     </SubLabel>
                   </Stack>
-                  <div>form section</div>
+                  <TogglePane>
+                    <ToggleGroup
+                      id="available"
+                      label="Available for hire"
+                      subLabel="Sit amet consectetur lorem ipsum dolor."
+                      checked
+                    />
+                    <ToggleGroup
+                      id="private"
+                      label="Make account private"
+                      subLabel="Sit amet consectetur lorem ipsum dolor."
+                      checked
+                    />
+                    <ToggleGroup
+                      id="comment"
+                      label="Allow commenting"
+                      subLabel="Sit amet consectetur lorem ipsum dolor."
+                    />
+                    <ToggleGroup
+                      id="mentions"
+                      label="Allow mentions"
+                      subLabel="Sit amet consectetur lorem ipsum dolor."
+                      checked
+                    />
+                  </TogglePane>
                 </Stack>
               </PadBox>
 
@@ -54,6 +79,12 @@ const FormPanel = styled.div`
   border-inline-start: 1px solid lightgrey;
 
   /* Any element, that has a previous element (sibling), apply this. */
+  > * + * {
+    border-block-start: 1px solid lightgrey;
+  }
+`;
+
+const TogglePane = styled.div`
   > * + * {
     border-block-start: 1px solid lightgrey;
   }
