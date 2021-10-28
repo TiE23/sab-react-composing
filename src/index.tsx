@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "@bedrock-layout/css-reset/lib/reset.css";
+import "./styles.css";
 
 import { AppBoundary } from "@bedrock-layout/appboundary";
 
