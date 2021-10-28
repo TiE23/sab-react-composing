@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@bedrock-layout/appboundary": "^2.1.6",
     "@bedrock-layout/center": "^2.1.5",
     "@bedrock-layout/cover": "^2.0.20",
     "@bedrock-layout/css-reset": "^1.1.1",

@@ -1254,6 +1254,14 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@bedrock-layout/appboundary@^2.1.6":
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/@bedrock-layout/appboundary/-/appboundary-2.1.6.tgz#6c112850ac72f73fee8591b52de3561719245f53"
+  integrity sha512-sn1jd15OM4kuMWtjaGl20cfTrTwUssVwGdEH1ftbEzdXEJ6Rgn6CMUgIgLEeJwzJ+pGgRdd7Afkcd2Vi+1h7Rw==
+  dependencies:
+    "@bedrock-layout/center" "^2.1.5"
+    "@bedrock-layout/spacing-constants" "^2.4.2"
+
 "@bedrock-layout/center@^2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@bedrock-layout/center/-/center-2.1.5.tgz#4f242f9539910519988b203eb86e2551c26611bb"
