@@ -6,6 +6,7 @@ import { Split } from "@bedrock-layout/split";
 
 import { Menu } from "./Menu";
 import { SidePanel } from "./SidePanel";
+import { Logo } from "./Logo";
 
 export default function App() {
   return (
@@ -20,13 +21,75 @@ export default function App() {
           </SettingsHeader>
           <SettingsPane as="main">
             <SidePanel />
-            <div>Placeholder for right hand side</div>
+            <FormPanel>
+              <section>
+                <header>
+                  <h2>Profile</h2>
+                  <span>
+                    This information will be displayed publicly so be careful what yuo choose.
+                  </span>
+                </header>
+                <div>
+                  <label>
+                    User Name
+                    <input />
+                  </label>
+                  <label>
+                    About
+                    <textarea />
+                    <span>
+                      Brief description for your profile. URLs are hyperlinked.
+                    </span>
+                  </label>
+                  <label>
+                    Photo
+                    <Logo inverse size="10rem" />
+                  </label>
+                </div>
+                <div>
+                  <label>
+                    First Name
+                    <input />
+                  </label>
+                  <label>
+                    Last Name
+                    <input />
+                  </label>
+                  <label>
+                    URL
+                    <input />
+                  </label>
+                  <label>
+                    Company
+                    <input />
+                  </label>
+                </div>
+              </section>
+
+              <section>
+                <h2>Privacy</h2>
+              </section>
+
+              <div>
+                <button>Cancel</button>
+                <button>Save</button>
+              </div>
+            </FormPanel>
           </SettingsPane>
         </Center>
       </ContentArea>
     </div>
   );
 }
+
+const FormPanel = styled.div`
+  border-inline-start: 1px solid lightgrey;
+
+  /* Any element, that has a previous element (sibling), apply this. */
+  > * + * {
+    border-block-start: 1px solid lightgrey;
+  }
+`;
 
 /**
  * Learn about gradients here: https://developer.mozilla.org/en-US/docs/Web/CSS/gradient
